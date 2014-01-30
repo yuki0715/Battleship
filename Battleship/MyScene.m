@@ -146,7 +146,7 @@ NSMutableArray *terrainArray;
                 
             }
             
-            if (isCoral) break;
+            if (isCoral) continue;
             
             // Checking for player1 base
             for (NSNumber *p1 in player1BasePositions)
@@ -160,7 +160,7 @@ NSMutableArray *terrainArray;
                 
             }
             
-            if (isPlayer1Base) break;
+            if (isPlayer1Base) continue;
             
             // Checking for player2 base
             for (NSNumber *p2 in player2BasePositions)
@@ -174,7 +174,7 @@ NSMutableArray *terrainArray;
                 
             }
             
-            if (isPlayer2Base) break;
+            if (isPlayer2Base) continue;
             
             // Otherwise regular water
             [innerArray addObject:waterTerrain];
@@ -190,46 +190,36 @@ NSMutableArray *terrainArray;
     
     for (int i = 0; i < numberOfRows; i++)
     {
-        
         innerArray = [terrainArray objectAtIndex:i];
         
         for (int j = 0; j < rowLength; j++)
         {
-            
             ter = [[innerArray objectAtIndex:j] intValue];
+            sprite = [[SKSpriteNode alloc] init];
             
             switch (ter)
             {
-            
                 case base1:
-                    //
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"MidBase"];
                     break;
                     
                 case base2:
-                    //
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"MidBase"];
                     break;
                     
                 case coral:
-                    //
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Coral"];
                     break;
                     
                 default:
-                    //
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"PureWater"];
                     break;
             
             }
-            
-            sprite.position = CGPointMake(rowLength * width30, numberOfRows * height30);
+            sprite.position = CGPointMake(rowLength + width30, numberOfRows + height30);
             [self addChild:sprite];
-            
         }
-        
     }
-    
 }
 
 
