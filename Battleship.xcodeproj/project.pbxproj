@@ -24,6 +24,11 @@
 		51171545189A390200BE75A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51171520189A390200BE75A9 /* UIKit.framework */; };
 		5117154D189A390200BE75A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5117154B189A390200BE75A9 /* InfoPlist.strings */; };
 		5117154F189A390200BE75A9 /* BattleshipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5117154E189A390200BE75A9 /* BattleshipTests.m */; };
+		516A0D76189A4B80000396ED /* BaseBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D71189A4B80000396ED /* BaseBottom.png */; };
+		516A0D77189A4B80000396ED /* BaseTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D72189A4B80000396ED /* BaseTop.png */; };
+		516A0D78189A4B80000396ED /* MidBase.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D73189A4B80000396ED /* MidBase.png */; };
+		516A0D79189A4B80000396ED /* Coral.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D74189A4B80000396ED /* Coral.png */; };
+		516A0D7A189A4B80000396ED /* PureWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D75189A4B80000396ED /* PureWater.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		5117154A189A390200BE75A9 /* BattleshipTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BattleshipTests-Info.plist"; sourceTree = "<group>"; };
 		5117154C189A390200BE75A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5117154E189A390200BE75A9 /* BattleshipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattleshipTests.m; sourceTree = "<group>"; };
+		516A0D71189A4B80000396ED /* BaseBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BaseBottom.png; path = Battleship/BaseBottom.png; sourceTree = SOURCE_ROOT; };
+		516A0D72189A4B80000396ED /* BaseTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BaseTop.png; sourceTree = "<group>"; };
+		516A0D73189A4B80000396ED /* MidBase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MidBase.png; sourceTree = "<group>"; };
+		516A0D74189A4B80000396ED /* Coral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coral.png; sourceTree = "<group>"; };
+		516A0D75189A4B80000396ED /* PureWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PureWater.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 				51171537189A390200BE75A9 /* MyScene.m */,
 				51171539189A390200BE75A9 /* Spaceship.png */,
 				5117153B189A390200BE75A9 /* Images.xcassets */,
+				516A0D70189A4B5C000396ED /* Sprites */,
 				51171525189A390200BE75A9 /* Supporting Files */,
 			);
 			path = Battleship;
@@ -162,6 +173,18 @@
 				5117154B189A390200BE75A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		516A0D70189A4B5C000396ED /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				516A0D71189A4B80000396ED /* BaseBottom.png */,
+				516A0D72189A4B80000396ED /* BaseTop.png */,
+				516A0D73189A4B80000396ED /* MidBase.png */,
+				516A0D74189A4B80000396ED /* Coral.png */,
+				516A0D75189A4B80000396ED /* PureWater.png */,
+			);
+			name = Sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +263,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516A0D77189A4B80000396ED /* BaseTop.png in Resources */,
 				51171529189A390200BE75A9 /* InfoPlist.strings in Resources */,
 				5117153C189A390200BE75A9 /* Images.xcassets in Resources */,
+				516A0D76189A4B80000396ED /* BaseBottom.png in Resources */,
 				5117153A189A390200BE75A9 /* Spaceship.png in Resources */,
+				516A0D7A189A4B80000396ED /* PureWater.png in Resources */,
+				516A0D79189A4B80000396ED /* Coral.png in Resources */,
+				516A0D78189A4B80000396ED /* MidBase.png in Resources */,
 				51171532189A390200BE75A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +506,7 @@
 				51171554189A390200BE75A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51171555189A390200BE75A9 /* Build configuration list for PBXNativeTarget "BattleshipTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +515,7 @@
 				51171557189A390200BE75A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
