@@ -216,7 +216,9 @@ NSMutableArray *terrainArray;
                     break;
             
             }
-            sprite.position = CGPointMake(rowLength + width30, numberOfRows + height30);
+            sprite.yScale = 1.55;
+            sprite.xScale = 2.1;
+            sprite.position = CGPointMake(i*width30 + sprite.frame.size.width/2, j*height30 + sprite.frame.size.height/2);
             [self addChild:sprite];
         }
     }
