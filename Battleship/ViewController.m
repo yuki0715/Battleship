@@ -39,12 +39,12 @@
     [super viewWillLayoutSubviews];
     
     // Plays music
-    NSError *error;
-    NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"Jigglypuff sings Game of Thrones a capella" withExtension:@"mp3"];
-    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
-    self.backgroundMusicPlayer.numberOfLoops = -1;
-    [self.backgroundMusicPlayer prepareToPlay];
-    [self.backgroundMusicPlayer play];
+//    NSError *error;
+//    NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"Jigglypuff sings Game of Thrones a capella" withExtension:@"mp3"];
+//    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+//    self.backgroundMusicPlayer.numberOfLoops = -1;
+//    [self.backgroundMusicPlayer prepareToPlay];
+//    [self.backgroundMusicPlayer play];
     
     // Configure the view.
     SKView * skView = (SKView *)self.view;

@@ -36,6 +36,7 @@
 		51C23992189C923500B5D430 /* TorpedoBoat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398D189C923500B5D430 /* TorpedoBoat.png */; };
 		51C23995189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C23994189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 */; };
 		51C23997189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C23996189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 */; };
+		51C23999189C9C1900B5D430 /* Pew.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C23998189C9C1900B5D430 /* Pew.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		51C2398D189C923500B5D430 /* TorpedoBoat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TorpedoBoat.png; sourceTree = "<group>"; };
 		51C23994189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Jigglypuff sings Game of Thrones a capella.mp3"; sourceTree = "<group>"; };
 		51C23996189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pew_Pew-DKnight556-1379997159.mp3"; sourceTree = "<group>"; };
+		51C23998189C9C1900B5D430 /* Pew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pew.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 		516A0D70189A4B5C000396ED /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				51C23998189C9C1900B5D430 /* Pew.png */,
 				51C23988189C922A00B5D430 /* Ships */,
 				516A0D71189A4B80000396ED /* BaseBottom.png */,
 				516A0D72189A4B80000396ED /* BaseTop.png */,
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				516A0D77189A4B80000396ED /* BaseTop.png in Resources */,
+				51C23999189C9C1900B5D430 /* Pew.png in Resources */,
 				51171529189A390200BE75A9 /* InfoPlist.strings in Resources */,
 				51C23990189C923500B5D430 /* MineLayer.png in Resources */,
 				5117153C189A390200BE75A9 /* Images.xcassets in Resources */,

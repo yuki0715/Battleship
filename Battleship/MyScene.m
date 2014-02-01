@@ -304,25 +304,31 @@ static NSString * const kShipNodeName = @"movable";
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Cruiser"];
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Pew"];
         
         sprite.position = location;
         
-        sprite.yScale = 2.1;
-        sprite.xScale = 1.55;
+//        sprite.yScale = 2.1;
+//        sprite.xScale = 1.55;
         
         //SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
         
         //[sprite runAction:[SKAction repeatActionForever:action]];
         
         [self addChild:sprite];
+        
+        
     }
     
     [self runAction:[SKAction playSoundFileNamed:@"Pew_Pew-DKnight556-1379997159.mp3" waitForCompletion:NO]];
+    
+    
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    
+    
 }
 
 @end
