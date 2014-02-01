@@ -86,7 +86,7 @@ NSMutableArray *terrainArray;
     for (int i = 0; i < 10; i++)
     {
         player2Base = [NSNumber numberWithInt:(329 + (30 * i))];
-        [player2BasePositions addObject:player1Base];
+        [player2BasePositions addObject:player2Base];
     }
     
     // Creating the random coral terrain array
@@ -117,9 +117,6 @@ NSMutableArray *terrainArray;
     bool isCoral = false;
     bool isPlayer1Base = false;
     bool isPlayer2Base = false;
-    
-#pragma This loop is broken for some reason
-#pragma Need to fix it.
     
     // THIS IS BROKEN
     for (int i = 0; i < numberOfRows; i++)
@@ -184,7 +181,7 @@ NSMutableArray *terrainArray;
     }
     
     // Load the sprites
-    SKSpriteNode *sprite;
+    SKSpriteNode *sprite = [[SKSpriteNode alloc] init];
     
     TerrainType ter;
     
@@ -195,33 +192,44 @@ NSMutableArray *terrainArray;
         for (int j = 0; j < rowLength; j++)
         {
             ter = [[innerArray objectAtIndex:j] intValue];
-            sprite = [[SKSpriteNode alloc] init];
             
             switch (ter)
             {
                 case base1:
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"MidBase"];
+                    sprite.zRotation = M_PI / 2;
                     break;
                     
                 case base2:
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"MidBase"];
+                    sprite.zRotation = 3 * M_PI / 2;
                     break;
                     
                 case coral:
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Coral"];
+                    sprite.zRotation = 3 * M_PI / 2;
                     break;
                     
                 default:
                     sprite = [SKSpriteNode spriteNodeWithImageNamed:@"PureWater"];
+                    sprite.zRotation = M_PI / 2;
                     break;
             
             }
-            sprite.yScale = 1.55;
-            sprite.xScale = 2.1;
+            
+            sprite.yScale = 2.1;
+            sprite.xScale = 1.55;
             sprite.position = CGPointMake(i*width30 + sprite.frame.size.width/2, j*height30 + sprite.frame.size.height/2);
             [self addChild:sprite];
         }
     }
+}
+
+/*
+ Initializes the ship locations on the bases
+ */
+- (void)initTerrain {
+    
 }
 
 
