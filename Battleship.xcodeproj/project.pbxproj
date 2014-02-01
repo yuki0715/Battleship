@@ -34,6 +34,8 @@
 		51C23990189C923500B5D430 /* MineLayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398B189C923500B5D430 /* MineLayer.png */; };
 		51C23991189C923500B5D430 /* RadarBoat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398C189C923500B5D430 /* RadarBoat.png */; };
 		51C23992189C923500B5D430 /* TorpedoBoat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398D189C923500B5D430 /* TorpedoBoat.png */; };
+		51C23995189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C23994189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 */; };
+		51C23997189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C23996189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		51C2398B189C923500B5D430 /* MineLayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MineLayer.png; sourceTree = "<group>"; };
 		51C2398C189C923500B5D430 /* RadarBoat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RadarBoat.png; sourceTree = "<group>"; };
 		51C2398D189C923500B5D430 /* TorpedoBoat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TorpedoBoat.png; sourceTree = "<group>"; };
+		51C23994189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Jigglypuff sings Game of Thrones a capella.mp3"; sourceTree = "<group>"; };
+		51C23996189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pew_Pew-DKnight556-1379997159.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		51171524189A390200BE75A9 /* Battleship */ = {
 			isa = PBXGroup;
 			children = (
+				51C23993189C99DE00B5D430 /* Sounds */,
 				5117152D189A390200BE75A9 /* AppDelegate.h */,
 				5117152E189A390200BE75A9 /* AppDelegate.m */,
 				51171530189A390200BE75A9 /* Main.storyboard */,
@@ -208,6 +213,15 @@
 				51C2398D189C923500B5D430 /* TorpedoBoat.png */,
 			);
 			name = Ships;
+			sourceTree = "<group>";
+		};
+		51C23993189C99DE00B5D430 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				51C23996189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 */,
+				51C23994189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +305,7 @@
 				51C23990189C923500B5D430 /* MineLayer.png in Resources */,
 				5117153C189A390200BE75A9 /* Images.xcassets in Resources */,
 				516A0D76189A4B80000396ED /* BaseBottom.png in Resources */,
+				51C23995189C99E700B5D430 /* Jigglypuff sings Game of Thrones a capella.mp3 in Resources */,
 				5117153A189A390200BE75A9 /* Spaceship.png in Resources */,
 				51C2398E189C923500B5D430 /* Cruiser.png in Resources */,
 				51C23991189C923500B5D430 /* RadarBoat.png in Resources */,
@@ -300,6 +315,7 @@
 				51C23992189C923500B5D430 /* TorpedoBoat.png in Resources */,
 				51171532189A390200BE75A9 /* Main.storyboard in Resources */,
 				51C2398F189C923500B5D430 /* Destroyer.png in Resources */,
+				51C23997189C9A9700B5D430 /* Pew_Pew-DKnight556-1379997159.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

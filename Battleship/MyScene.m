@@ -228,7 +228,7 @@ static NSString * const kShipNodeName = @"movable";
             
             }
             
-            sprite.yScale = 2.1;
+            sprite.yScale = 2.13;
             sprite.xScale = 1.55;
             sprite.position = CGPointMake(i*width30 + sprite.frame.size.width/2, j*height30 + sprite.frame.size.height/2);
             [self addChild:sprite];
@@ -289,7 +289,7 @@ static NSString * const kShipNodeName = @"movable";
         width = pos / 30;
         height = pos % 30;
         
-        sprite.yScale = 2.1;
+        sprite.yScale = 2.10;
         sprite.xScale = 1.55;
         sprite.position = CGPointMake(width*width30 + sprite.frame.size.width/2, height*height30 + sprite.frame.size.height/2);
         [self addChild:sprite];
@@ -317,6 +317,8 @@ static NSString * const kShipNodeName = @"movable";
         
         [self addChild:sprite];
     }
+    
+    [self runAction:[SKAction playSoundFileNamed:@"Pew_Pew-DKnight556-1379997159.mp3" waitForCompletion:NO]];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
