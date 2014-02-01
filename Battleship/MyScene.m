@@ -8,22 +8,6 @@
 
 #import "MyScene.h"
 
-// 1
-@interface MyScene ()
-@end
-
-@implementation MyScene
-
--(id)initWithSize:(CGSize)size {    
-    if (self = [super initWithSize:size]) {
-        
-        self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-        
-        [self initTerrain];
-    }
-    return self;
-}
-
 // Enum representing what is contained within the array at this specific position for terrain
 typedef enum
 {
@@ -36,6 +20,34 @@ typedef enum
 
 // Terrain Array that is accessible
 NSMutableArray *terrainArray;
+
+// Ship Array of this player
+NSMutableArray *thisPlayer;
+
+// Position of player 1 base;
+NSMutableArray *player1BasePositions;
+
+// Tracks the movable ship
+static NSString * const kShipNodeName = @"movable";
+
+@interface MyScene ()
+
+@property (nonatomic, strong) SKSpriteNode *selectedShip;
+
+@end
+
+@implementation MyScene
+
+-(id)initWithSize:(CGSize)size {    
+    if (self = [super initWithSize:size]) {
+        
+        self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        
+        [self initTerrain];
+        [self initShips];
+    }
+    return self;
+}
 
 /*
  Creates a randomly generated terrain.
@@ -72,7 +84,7 @@ NSMutableArray *terrainArray;
     // Creating the base arrays
     
     NSNumber *player1Base;
-    NSMutableArray *player1BasePositions = [[NSMutableArray alloc] init];
+    player1BasePositions = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 10; i++)
     {
@@ -81,7 +93,7 @@ NSMutableArray *terrainArray;
     }
     
     NSNumber *player2Base;
-    NSMutableArray *player2BasePositions = [[NSMutableArray alloc] init];
+    NSMutableSet *player2BasePositions = [[NSMutableSet alloc] init];
     
     for (int i = 0; i < 10; i++)
     {
@@ -92,7 +104,7 @@ NSMutableArray *terrainArray;
     // Creating the random coral terrain array
     
     NSNumber *coralTemp;
-    NSMutableArray *coralPositions = [[NSMutableArray alloc] init];
+    NSMutableSet *coralPositions = [[NSMutableSet alloc] init];
     
     while ([coralPositions count] < 24)
     {
@@ -118,7 +130,6 @@ NSMutableArray *terrainArray;
     bool isPlayer1Base = false;
     bool isPlayer2Base = false;
     
-    // THIS IS BROKEN
     for (int i = 0; i < numberOfRows; i++)
     {
         innerArray = [terrainArray objectAtIndex:i];
@@ -226,10 +237,64 @@ NSMutableArray *terrainArray;
 }
 
 /*
- Initializes the ship locations on the bases
+ Initializes the ship locations on the base.
+ This method uses a previously instantiated array of ship locations for the ships to be loaded.
+ Right now it randomly loads them in a position on its base.
  */
-- (void)initTerrain {
+- (void)initShips {
     
+    int width30 = self.frame.size.width / 30;
+    int height30 = self.frame.size.height / 30;
+    
+    // Loading the images of the ships
+    NSArray *imageNames = @[@"Cruiser",
+                            @"Cruiser",
+                            @"Destroyer",
+                            @"Destroyer",
+                            @"Destroyer",
+                            @"TorpedoBoat",
+                            @"TorpedoBoat",
+                            @"MineLayer",
+                            @"MineLayer",
+                            @"RadarBoat"];
+    
+    // Copy the player base array
+    NSMutableArray *shuffle = [[NSMutableArray alloc] initWithArray:player1BasePositions copyItems:YES];
+    
+    // Counts the numner of positions
+    NSUInteger count = [shuffle count];
+    for (NSUInteger i = 0; i < count; ++i) {
+        // Select a random element between i and end of array to swap with.
+        NSInteger nElements = count - i;
+        NSInteger n = arc4random_uniform(nElements) + i;
+        [shuffle exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+    
+    // Load the sprites
+    NSNumber *position;
+    int pos;
+    int width;
+    int height;
+    NSString *imageName;
+    SKSpriteNode *sprite;
+    
+    for (int i = 0; i < [shuffle count]; i++)
+    {
+        imageName = [imageNames objectAtIndex:i];
+        sprite = [SKSpriteNode spriteNodeWithImageNamed:imageName];
+        
+        position = [shuffle objectAtIndex:i];
+        pos = [position intValue];
+        
+        width = pos / 30;
+        height = pos % 30;
+        
+        sprite.yScale = 2.1;
+        sprite.xScale = 1.55;
+        sprite.position = CGPointMake(width*width30 + sprite.frame.size.width/2, height*height30 + sprite.frame.size.height/2);
+        [self addChild:sprite];
+        
+    }
 }
 
 

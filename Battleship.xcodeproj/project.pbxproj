@@ -29,6 +29,11 @@
 		516A0D78189A4B80000396ED /* MidBase.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D73189A4B80000396ED /* MidBase.png */; };
 		516A0D79189A4B80000396ED /* Coral.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D74189A4B80000396ED /* Coral.png */; };
 		516A0D7A189A4B80000396ED /* PureWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 516A0D75189A4B80000396ED /* PureWater.png */; };
+		51C2398E189C923500B5D430 /* Cruiser.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C23989189C923500B5D430 /* Cruiser.png */; };
+		51C2398F189C923500B5D430 /* Destroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398A189C923500B5D430 /* Destroyer.png */; };
+		51C23990189C923500B5D430 /* MineLayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398B189C923500B5D430 /* MineLayer.png */; };
+		51C23991189C923500B5D430 /* RadarBoat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398C189C923500B5D430 /* RadarBoat.png */; };
+		51C23992189C923500B5D430 /* TorpedoBoat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C2398D189C923500B5D430 /* TorpedoBoat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		516A0D73189A4B80000396ED /* MidBase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MidBase.png; sourceTree = "<group>"; };
 		516A0D74189A4B80000396ED /* Coral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coral.png; sourceTree = "<group>"; };
 		516A0D75189A4B80000396ED /* PureWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PureWater.png; sourceTree = "<group>"; };
+		51C23989189C923500B5D430 /* Cruiser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cruiser.png; sourceTree = "<group>"; };
+		51C2398A189C923500B5D430 /* Destroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Destroyer.png; sourceTree = "<group>"; };
+		51C2398B189C923500B5D430 /* MineLayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MineLayer.png; sourceTree = "<group>"; };
+		51C2398C189C923500B5D430 /* RadarBoat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RadarBoat.png; sourceTree = "<group>"; };
+		51C2398D189C923500B5D430 /* TorpedoBoat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TorpedoBoat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +188,7 @@
 		516A0D70189A4B5C000396ED /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				51C23988189C922A00B5D430 /* Ships */,
 				516A0D71189A4B80000396ED /* BaseBottom.png */,
 				516A0D72189A4B80000396ED /* BaseTop.png */,
 				516A0D73189A4B80000396ED /* MidBase.png */,
@@ -185,6 +196,18 @@
 				516A0D75189A4B80000396ED /* PureWater.png */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		51C23988189C922A00B5D430 /* Ships */ = {
+			isa = PBXGroup;
+			children = (
+				51C23989189C923500B5D430 /* Cruiser.png */,
+				51C2398A189C923500B5D430 /* Destroyer.png */,
+				51C2398B189C923500B5D430 /* MineLayer.png */,
+				51C2398C189C923500B5D430 /* RadarBoat.png */,
+				51C2398D189C923500B5D430 /* TorpedoBoat.png */,
+			);
+			name = Ships;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,13 +288,18 @@
 			files = (
 				516A0D77189A4B80000396ED /* BaseTop.png in Resources */,
 				51171529189A390200BE75A9 /* InfoPlist.strings in Resources */,
+				51C23990189C923500B5D430 /* MineLayer.png in Resources */,
 				5117153C189A390200BE75A9 /* Images.xcassets in Resources */,
 				516A0D76189A4B80000396ED /* BaseBottom.png in Resources */,
 				5117153A189A390200BE75A9 /* Spaceship.png in Resources */,
+				51C2398E189C923500B5D430 /* Cruiser.png in Resources */,
+				51C23991189C923500B5D430 /* RadarBoat.png in Resources */,
 				516A0D7A189A4B80000396ED /* PureWater.png in Resources */,
 				516A0D79189A4B80000396ED /* Coral.png in Resources */,
 				516A0D78189A4B80000396ED /* MidBase.png in Resources */,
+				51C23992189C923500B5D430 /* TorpedoBoat.png in Resources */,
 				51171532189A390200BE75A9 /* Main.storyboard in Resources */,
+				51C2398F189C923500B5D430 /* Destroyer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
