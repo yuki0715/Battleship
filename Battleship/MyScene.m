@@ -304,13 +304,16 @@ static NSString * const kShipNodeName = @"movable";
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Cruiser"];
         
         sprite.position = location;
         
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+        sprite.yScale = 2.1;
+        sprite.xScale = 1.55;
         
-        [sprite runAction:[SKAction repeatActionForever:action]];
+        //SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+        
+        //[sprite runAction:[SKAction repeatActionForever:action]];
         
         [self addChild:sprite];
     }
